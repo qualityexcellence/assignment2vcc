@@ -1,0 +1,79 @@
+GCP IAM Roles Configuration
+===========================
+
+Project: GCP VM Auto-Scaling and Security Implementation
+
+Purpose
+-------
+IAM (Identity and Access Management) is used to enforce role-based access control
+following the principle of least privilege.
+
+Roles Assigned
+--------------
+
+1. Compute Viewer
+   Role ID:
+   roles/compute.viewer
+
+   Permission Scope:
+   - Read-only access to Compute Engine resources
+   - View VM instances, instance groups, and templates
+   - No modification permissions
+
+   Intended User:
+   - Developers / Auditors
+
+
+2. Compute Admin
+   Role ID:
+   roles/compute.admin
+
+   Permission Scope:
+   - Create, modify, and delete VM instances
+   - Manage instance templates
+   - Manage managed instance groups
+   - Configure autoscaling policies
+
+   Intended User:
+   - DevOps Engineers / Cloud Administrators
+
+
+3. Security Admin
+   Role ID:
+   roles/compute.securityAdmin
+
+   Permission Scope:
+   - Manage firewall rules
+   - Configure network security policies
+   - Control ingress and egress traffic
+
+   Intended User:
+   - Security Team
+
+
+Implementation Notes
+--------------------
+
+- IAM roles were assigned from:
+  IAM & Admin → IAM → Grant Access
+
+- Role assignment demonstrates separation of responsibilities.
+
+- Principle applied:
+  Least Privilege Access
+
+- For demonstration purposes, roles may be assigned to the project owner account.
+
+Security Best Practices
+-----------------------
+
+- Avoid assigning Owner role unnecessarily.
+- Use role-based access instead of full administrative permissions.
+- Separate operational and security responsibilities.
+- Restrict permissions to only required resources.
+
+Conclusion
+----------
+
+IAM roles were configured to ensure controlled access to compute resources,
+supporting secure and scalable cloud infrastructure deployment.
