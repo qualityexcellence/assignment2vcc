@@ -41,6 +41,8 @@ This project demonstrates deployment of a scalable and secure VM infrastructure 
    Instance Template  --->  Managed Instance Group
    Health Check       --->  Managed Instance Group
 
+   ![Architecture Diagram](architecture/gcp_architecture_diagram.png)
+
 ---
 
 ## Implementation Steps
